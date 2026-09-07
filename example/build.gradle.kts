@@ -34,6 +34,8 @@ android {
                 "MissingTranslation",
                 "OldTargetApi",
                 "GradleDependency",
+                // See appintro/build.gradle.kts: version-drift check, fails once a newer AGP ships.
+                "AndroidGradlePluginVersion",
             ),
         )
     }

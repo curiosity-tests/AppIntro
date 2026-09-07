@@ -39,6 +39,11 @@ android {
                     "MissingTranslation",
                     "OldTargetApi",
                     "GradleDependency",
+                    // Same rationale as GradleDependency above: this check fails the build the
+                    // day a newer AGP ships, independently of this project's code. AGP 9.4.0 is
+                    // out while main still pins 9.3.2 (upstream PR AppIntro/AppIntro#1343 is the
+                    // pending bump), so `lint` is red for everyone until that lands.
+                    "AndroidGradlePluginVersion",
                 ),
             )
         }
